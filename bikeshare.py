@@ -23,8 +23,8 @@ def get_filters():
     #Get user input for city (chicago, new york city, washington).
     city = ''
     while True:
-        city = input("Please choose city either 'Chicago', 'New York City' or 'Washington': ").lower()
-        if city.lower() not in cities:
+        city = input("Please choose city either 'Chicago', 'New York City' or 'Washington': ")
+        if city not in cities:
             print("Sorry, wrong input. Please choose city either 'Chicago', 'New York City' or 'Washington'.")
             continue
         else:
@@ -45,8 +45,8 @@ def get_filters():
     #Get user input for day of week (all, monday, tuesday, ... sunday)
     day = ''
     while True:
-        day = input("Please choose 'all', or any day of a week: ").lower()
-        if day.lower() not in week:
+        day = input("Please choose 'all', or any day of a week: ")
+        if day not in week:
             print("Sorry wrong input. Please choose 'all', or any day of a week: ")
             continue
         else:
