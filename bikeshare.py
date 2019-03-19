@@ -220,23 +220,7 @@ def user_stats(df):
         
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-def more_raw_data(df):
-    """ Accesses csv files and displays more rows of its raw data"""
- 
- 
-    more_raw_data = ''
-    i = 0
-    while True:
-        more_raw_data = input(" Would you like to see more records of raw biking data(yes/no):   ").lower()
-        if more_raw_data == "yes":
-            print(df.iloc[i:i+5])
-            i+=5
-            continue
-        else:
-            break
- 
-    print('-'*40)          
+          
  
  
 def main():
@@ -248,7 +232,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        more_raw_data(df)
+       
  
         """ Asks user to restart program and clears screen if yes """
  
