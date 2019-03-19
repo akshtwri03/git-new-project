@@ -23,8 +23,8 @@ def get_filters():
     #Get user input for city (chicago, new york city, washington).
     city = ''
     while True:
-        city = input("Please choose city either 'Chicago', 'New York City' or 'Washington': ").lower()
-        if city.lower() not in cities:
+        city = input("Please choose city either 'Chicago', 'New York City' or 'Washington': ")
+        if city not in cities:
             print("Sorry, wrong input. Please choose city either 'Chicago', 'New York City' or 'Washington'.")
             continue
         else:
@@ -45,8 +45,8 @@ def get_filters():
     #Get user input for day of week (all, monday, tuesday, ... sunday)
     day = ''
     while True:
-        day = input("Please choose 'all', or any day of a week: ").lower()
-        if day.lower() not in week:
+        day = input("Please choose 'all', or any day of a week: ")
+        if day not in week:
             print("Sorry wrong input. Please choose 'all', or any day of a week: ")
             continue
         else:
@@ -220,23 +220,7 @@ def user_stats(df):
         
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
-def more_raw_data(df):
-    """ Accesses csv files and displays more rows of its raw data"""
- 
- 
-    more_raw_data = ''
-    i = 0
-    while True:
-        more_raw_data = input(" Would you like to see more records of raw biking data(yes/no):   ").lower()
-        if more_raw_data == "yes":
-            print(df.iloc[i:i+5])
-            i+=5
-            continue
-        else:
-            break
- 
-    print('-'*40)          
+          
  
  
 def main():
@@ -248,7 +232,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        more_raw_data(df)
+       
  
         """ Asks user to restart program and clears screen if yes """
  
